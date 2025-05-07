@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 0;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+}
+
+.logo {
+    float:left;
+    margin-bottom: 100px;
+    font-size:x-large;
+}
+
+nav{
+    float:right;
+    margin-right: 20px;
+}
+
+nav ol{
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+.hero {
+    padding: 60px 0;
+    background: #f5f5f5;
+    text-align: center;
+
+}
+
+.about, .projects, .contact {
+    padding: 60px 0;
+}
+
+.project-grid{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.grid-item{
+    background-color: #eaeaea;
+    padding: 20px;
+    flex: 1 1 250px;
+    text-align: center;
+    border-radius : 10px; 
+}
+
+
+.contact form{
+    display: flex;
+    color: auto;
+    margin: auto;
+    flex-direction:column;
+    gap: 15px;
+    max-width: 500px;
+}
+
+.contact input .contact textarea{
+    font-size: 16px;
+    padding: 10px;
+}
+
+
+.contact button{
+    background-color: black;
+    padding: 20px;
+    color: white;
+    cursor:text;
+    border: none;
+
+}
+
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 15px 0;
+    text-align:end;
+    margin-top: 50px;
+}
+
+
+/*Responsive Media Query */
+@media (max-width: 768px) {
+    nav ol {
+        flex-direction:column;
+        align-items :center;
+    }
+
+    .project-grid{
+        flex-direction:row;
+    }
+
+    .logo, nav{
+        text-align:right;
+        float:none;
+    }
+
+
+    .fade-in{
+        opacity: 0;
+        animation: fadeIn ease 5s forwards;
+    }
+    @keyframes fadeIn{
+        to{
+            opacity: 1;
+        }
+    }
+}
